@@ -3,7 +3,7 @@
  * Two implementations of the factorial function.
  * This is just a place holder class for the two functions
  * 
- * @author Charles Hoot 
+ * @author Charle's Hoot 
  * @version 4.0
  */
 public class RecursiveFactorial
@@ -36,7 +36,7 @@ public class RecursiveFactorial
     {
         // IMPLEMENT THIS METHOD USING THE RECURSIVE HELPER FUNCTION
         // AND RETURN SOMETHING APPROPRIATE
-        return 0;
+    	return helper(n,1);        //calling tail recursion
     }
 
     /**
@@ -52,7 +52,10 @@ public class RecursiveFactorial
         long result = 0;
         // IMPLEMENT THIS TAIL RECURSIVE METHOD
       
-        return result;
+        if(n<=1)              //if n=...-3,-2,-1,0,1
+    	   return partial;                  //return partial
+       else
+    	  return  helper(n-1,n*partial);               //recursive call to tail function
     }
 
 

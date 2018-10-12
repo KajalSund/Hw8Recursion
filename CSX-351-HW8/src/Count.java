@@ -32,10 +32,13 @@ public class Count
     private static void countUp(int n)
     {
         // IMPLEMENT THIS RECURSIVE METHOD
-     
+    
+    	if(n<=0)
+    		return ;
+    	countUp(n-1);       // print value of n
+    	System.out.println(n);     //recursive call to countDown by decrementing n
+    
     }
-    
-    
     /**
      * countDown - A recursive function that counts down from n to 1.
      *
@@ -44,7 +47,10 @@ public class Count
     private static void countDown(int n)
     {
         // IMPLEMENT THIS RECURSIVE METHOD
-
+    	if(n<=0)
+    		return;
+    	System.out.println(n);     // print value of n
+    	countDown(n-1);      //recursive call to countDown by decrementing n
     }
     
     

@@ -41,7 +41,14 @@ public class RecursiveFibonacci
     {
         long result = 0;
         // IMPLEMENT THIS RECURSIVE METHOD
-        return result;
+        if(n<=1)
+        	return n;
+        if (n%2==0)
+        	return (long)Math.pow(better(n/2),2)+2*better(n/2-1)*better(n/2);
+        else
+        	return 2*(long)Math.pow(better(n/2),2)+ 2*better(n/2)*better(n/2-1)+(long)Math.pow(better(n/2-1), 2);
+  
+        
     }
 
 
@@ -56,6 +63,7 @@ public class RecursiveFibonacci
     {
         // IMPLEMENT THIS METHOD USING A RECURSIVE HELPER FUNCTION
         // AND RETURN AN APPROPRIATE VALUE
+    	
          return 0;
     } 
     
@@ -69,6 +77,7 @@ public class RecursiveFibonacci
     public boolean secondMSB(long n)
     {
         // IMPLEMENT THIS METHOD AND RETURN AN APPROPRIATE VALUE
+    	
          return false;
     }
 

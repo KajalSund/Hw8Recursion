@@ -1,8 +1,8 @@
 
 /**
- * A class that has a methond to recursively replaces characters in a String.
+ * A class that has a method to recursively replaces characters in a String.
  * 
- * @author Charles Hoot
+ * @author Charle's Hoot
  * @version 4.0
  */
 public class RecursiveStringReplace
@@ -18,12 +18,34 @@ public class RecursiveStringReplace
      */
     public String replace(String s, char from, char to)
     {
-        String result = null;
+        String result;
+        if(s=="")
+        	return null;
 
         // IMPLEMENT THIS RECURSIVE METHOD
+        
+if(s.length()<1)    //if length of string is less than 1
+	
+	return s;                     // then return string
 
-        return result;
-    }
+else
+{
+char first;
+
+if(from==s.charAt(0))       //if character exist in string then    
+	first=to;                //replace it with to character
+else
+	first=s.charAt(0);          //else there is no change in string
+	
+return first+replace(s.substring(1),from,to);          //recursive call to replace function and adding previous string 
+
+}
 
 
+       
+    
+
+
+}
+    
 }
